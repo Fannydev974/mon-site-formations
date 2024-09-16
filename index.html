@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations en ligne</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Mes Formations</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Transformez vos compétences, boostez votre carrière !</h1>
+            <p>Vous souhaitez acquérir de nouvelles compétences ou perfectionner vos connaissances dans un domaine en
+                pleine
+                expansion ? Nos formations sont conçues pour vous permettre d’apprendre rapidement et de manière
+                efficace, quel que
+                soit votre niveau !</p>
+        </section>
+
+        <section class="formations">
+            <h2>Nos Formations</h2>
+            <section class="formation-intro">
+                <h2>Pourquoi choisir nos formations ?</h2>
+                <p>Nos formations vous permettent d’apprendre les bases et d’avancer vers des niveaux supperieur. Avec
+                    des
+                    contenus
+                    flexibles, adaptés à votre emploi du temps, chaque minute passée à
+                    apprendre vous
+                    rapproche de votre succès.</p>
+            </section>
+            <div class="formation-list">
+                <div class="formation-card">
+                    <h3>Formation HTML & CSS</h3>
+                    <p>Créez des sites web modernes avec les bases du développement web.</p>
+                    <a href="formation1.html" class="btn">Voir la formation</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Formation JavaScript</h3>
+                    <p>Devenez expert en JavaScript pour des sites interactifs.</p>
+                    <a href="formation2.html" class="btn">Voir la formation</a>
+                </div>
+                <div class="formation-card">
+                    <h3>Responsive Design</h3>
+                    <p>Apprenez à adapter vos sites à tous les écrans.</p>
+                    <a href="formation3.html" class="btn">Voir la formation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Formations. Tous droits réservés.</p>
+    </footer>
+
+</body>
+<script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+        // Validation basique
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '' || email === '' || message === '') {
+            formMessage.textContent = "Veuillez remplir tous les champs.";
+            formMessage.style.color = "red";
+            formMessage.style.visibility = "visible";
+        } else {
+            formMessage.textContent = "Merci ! Votre message a été envoyé.";
+            formMessage.style.color = "green";
+            formMessage.style.visibility = "visible";
+
+            // Tu peux ajouter un code AJAX ici pour envoyer les données sans recharger la page
+            // Ex: utilisation d'une API backend pour traiter le formulaire et envoyer l'email.
+
+            // Si tu veux envoyer directement à un backend PHP :
+            form.submit();
+        }
+    });
+</script>
+
+
+</html>
