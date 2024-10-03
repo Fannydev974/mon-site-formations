@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Formation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Mes Formations</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formation-details">
+            <h2>Formation HTML & CSS</h2>
+            <p>Cette formation vous permettra d'apprendre les bases du développement web en utilisant HTML et CSS. Vous
+                apprendrez à créer des sites web modernes et responsifs.</p>
+            <p><strong>Prix :</strong> 1000€</p>
+            <button id="buyBtn" class="btn">Acheter la formation</button>
+
+            <div class="cta">
+                <a href="formation-content.html" id="accessBtn" class="btn">Accéder à la formation</a>
+                <p class="cta-message">Commencez maintenant et accédez à des connaissances précieuses à votre rythme.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Formations. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Vérification du paiement pour activer/désactiver le bouton d'accès
+        const accessBtn = document.getElementById('accessBtn');
+        const formationPaid = localStorage.getItem('formationPaid');
+
+        if (formationPaid === 'true') {
+            accessBtn.style.display = 'inline-block';  // Le bouton "Accéder à la formation" est visible si le paiement est effectué
+        } else {
+            accessBtn.style.display = 'none';  // Le bouton "Accéder à la formation" est masqué si le paiement n'est pas effectué
+        }
+    </script>
+
+</body>
+
+</html>

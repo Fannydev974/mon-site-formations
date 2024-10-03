@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenu de la Formation HTML & CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Mes Formations</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formation-content" id="formationContent" style="display: none;">
+            <h2>Formation HTML & CSS - Contenu</h2>
+            <p>Bienvenue dans la formation HTML & CSS ! Voici le contenu exclusif réservé aux utilisateurs ayant payé.
+            </p>
+            <ul>
+                <li>Introduction à HTML</li>
+                <li>Structure de base d'une page web</li>
+                <li>Utilisation de CSS pour styliser une page</li>
+                <li>Création de mises en page responsives</li>
+                <!-- Ajoutez plus de contenu ici -->
+            </ul>
+        </section>
+
+        <section id="paymentError" style="display: none;">
+            <p>Vous n'avez pas encore payé pour cette formation. Veuillez <a href="paiement.html">payer ici</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Formations. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Vérifier si le paiement a été effectué
+        const formationPaid = localStorage.getItem('formationPaid');
+
+        if (formationPaid === 'true') {
+            // Afficher le contenu si l'utilisateur a payé
+            document.getElementById('formationContent').style.display = 'block';
+        } else {
+            // Afficher un message d'erreur sinon
+            document.getElementById('paymentError').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

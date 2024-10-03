@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <div class="logo">Mes Formations</div>
+        <div class="logo">JSJ Développement et Formation</div>
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -25,21 +25,16 @@
         <section class="hero">
             <h1>Transformez vos compétences, boostez votre carrière !</h1>
             <p>Vous souhaitez acquérir de nouvelles compétences ou perfectionner vos connaissances dans un domaine en
-                pleine
-                expansion ? Nos formations sont conçues pour vous permettre d’apprendre rapidement et de manière
-                efficace, quel que
-                soit votre niveau !</p>
+                pleine expansion ? Nos formations sont conçues pour vous permettre d’apprendre rapidement et de manière
+                efficace, quel que soit votre niveau !</p>
         </section>
 
         <section class="formations">
             <h2>Nos Formations</h2>
             <section class="formation-intro">
                 <h2>Pourquoi choisir nos formations ?</h2>
-                <p>Nos formations vous permettent d’apprendre les bases et d’avancer vers des niveaux supperieur. Avec
-                    des
-                    contenus
-                    flexibles, adaptés à votre emploi du temps, chaque minute passée à
-                    apprendre vous
+                <p>Nos formations vous permettent d’apprendre les bases et d’avancer vers des niveaux supérieurs. Avec
+                    des contenus flexibles, adaptés à votre emploi du temps, chaque minute passée à apprendre vous
                     rapproche de votre succès.</p>
             </section>
             <div class="formation-list">
@@ -66,36 +61,9 @@
         <p>&copy; 2024 Mes Formations. Tous droits réservés.</p>
     </footer>
 
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="js/scripts.js"></script>
+
 </body>
-<script>
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Empêche l'envoi du formulaire par défaut
-
-        // Validation basique
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (name === '' || email === '' || message === '') {
-            formMessage.textContent = "Veuillez remplir tous les champs.";
-            formMessage.style.color = "red";
-            formMessage.style.visibility = "visible";
-        } else {
-            formMessage.textContent = "Merci ! Votre message a été envoyé.";
-            formMessage.style.color = "green";
-            formMessage.style.visibility = "visible";
-
-            // Tu peux ajouter un code AJAX ici pour envoyer les données sans recharger la page
-            // Ex: utilisation d'une API backend pour traiter le formulaire et envoyer l'email.
-
-            // Si tu veux envoyer directement à un backend PHP :
-            form.submit();
-        }
-    });
-</script>
-
 
 </html>

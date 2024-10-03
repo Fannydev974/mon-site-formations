@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement de la Formation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Mes Formations</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <h2>Confirmez votre paiement pour la formation HTML & CSS</h2>
+            <p>Prix : 1000€</p>
+            <button id="payBtn" class="btn">Payer maintenant</button>
+            <p id="paymentStatus" style="display: none; color: green;">Paiement effectué avec succès ! Vous pouvez
+                accéder à la formation.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mes Formations. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('payBtn').addEventListener('click', function () {
+            // Simuler le paiement réussi
+            localStorage.setItem('formationPaid', 'true');  // Enregistrer l'information dans le localStorage
+            document.getElementById('paymentStatus').style.display = 'block';  // Afficher le message de succès
+        });
+    </script>
+</body>
+
+</html>
