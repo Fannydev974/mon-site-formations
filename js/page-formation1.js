@@ -29,3 +29,35 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Le bouton "Accéder à la formation" est introuvable.');
     }
 });
+
+/**Pour les onglets exercices pratiques */
+function showModule(moduleNumber) {
+    // Masquer tout le contenu des modules
+    document.querySelectorAll('section[id^="module"]').forEach(function (section) {
+        section.style.display = 'none';
+    });
+
+    // Afficher le contenu du module sélectionné
+    document.getElementById('module' + moduleNumber + '-content').style.display = 'block';
+}
+
+// Gestion des onglets
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    // Cacher tous les contenus d'onglet
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Supprimer la classe "active" de tous les boutons d'onglet
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Afficher le contenu de l'onglet sélectionné et ajouter la classe "active" au bouton
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}

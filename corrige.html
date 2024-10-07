@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrigé - Page de Profil Personnel</title>
+    <link rel="stylesheet" href="css/exercice-pratique.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Corrigé de l'Exercice : Page de Profil Personnel</h1>
+
+        <h2>Code HTML :</h2>
+        <!--Code pour HTML brut pour pas que le navigateur l'interprète pour le corrigé de l'exercice-->
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mon Profil&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;Mon Profil&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;section class="profile"&gt;
+        &lt;img src="images/profil.jpg" alt="Photo de Profil" class="profile-image"&gt;
+        &lt;h2&gt;Nom de la Personne&lt;/h2&gt;
+        &lt;p&gt;Une brève description ici. Passionné de web, curieux et toujours prêt à apprendre de nouvelles technologies.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section class="social-links"&gt;
+        &lt;a href="#"&gt;Facebook&lt;/a&gt;
+        &lt;a href="#"&gt;Twitter&lt;/a&gt;
+        &lt;a href="#"&gt;LinkedIn&lt;/a&gt;
+    &lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </div>
+    <div class="container">
+        <h2>Code CSS :</h2>
+        <pre>
+        /* Style général */
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        }
+
+        header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        }
+        .profile {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        }
+
+        .social-links a {
+        text-decoration: none;
+        color: white;
+        background-color: #333;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        }
+        </pre>
+    </div>
+    <h2>Rendu final :</h2>
+    <img src="images/exemple-corrige.png" alt="Rendu final du corrigé">
+
+
+</body>
+
+</html>
